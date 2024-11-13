@@ -3,7 +3,7 @@ version: "3"
 services:
   superb-app:
     build: .
-    image: superb-compose:1.0
+    image: emiwest/superb-compose:1.0
     container_name: superb-app
     ports:
       - 8080:80
