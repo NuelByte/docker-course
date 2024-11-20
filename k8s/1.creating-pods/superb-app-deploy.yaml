@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: superb-deployment
+  name: superb-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: superb-deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: superb-deployment
+    spec:
+      containers:
+      - image: emiwest/superb-compose:1.0
+        name: superb-compose
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
